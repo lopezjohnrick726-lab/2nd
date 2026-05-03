@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthsary Patch 0.2 | Shion Simulator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+    <div id="setup-screen">
+        <h2>⚠️ ACCESS RESTRICTED</h2>
+        <p>Baobei, you must pass 5 stages of <strong>"How Shion Handles Cera's Topak"</strong> to unlock your special letter.</p>
+        <button onclick="showRules()">START SIMULATION</button>
+    </div>
+
+    <div id="rules-screen" style="display:none;">
+        <h2>📜 THE RULES</h2>
+        <div class="rules-box">
+            <p>1. You are playing as <strong>Hubby</strong>.</p>
+            <p>2. Cera is my Boss, and she will try to pick fights with you.</p>
+            <p>3. You must select the <strong>EXACT</strong> responses Hubby used in real life to win the banter.</p>
+            <p>4. One wrong move = Detection Failure.</p>
+            <p>5. Pass 5 stages to prove you're really my Wifey.</p>
+        </div>
+        <button onclick="startActualGame()">Goodluck, Wifey!!! 😙</button>
+    </div>
+<div id="stage-1" class="stage-container" style="display:none;">
+    <div class="level-header">STAGE 1/5</div>
+    <div class="chat-bubble her">Buti nalang hindi ka nag practice kay 4x bei... Dami tag sa Tiktok. Sweet sweet mo nga!</div>
+    <div class="options-container">
+        <button onclick="wrongAnswer()">Dati pa 'yon, 'wag mo na isipin.</button>
+        <button onclick="showProof('4x.png', 1)">Tapos ngayon apura tag kay ur_xijai.</button>
+        <button onclick="wrongAnswer()">Hindi ko naman sinasadya 'yon.</button>
+    </div>
+</div>
+
+<div id="stage-2" class="stage-container" style="display:none;">
+    <div class="level-header">STAGE 2/5</div>
+    <div class="chat-bubble her">Ako nga napanaginipan ko may kasama kang iba eh. Sinabi ko ba?! Baka nakakalimutan mo, gifted panaginip ko!</div>
+    <div class="options-container">
+        <button onclick="showProof('STI 1.png', 2)">Ako sisira sa panaginip mo.</button>
+        <button onclick="wrongAnswer()">Panaginip lang 'yan, bakit ka galit?</button>
+        <button onclick="wrongAnswer()">Sino ba 'yon? Hindi ko kilala.</button>
+    </div>
+</div>
+
+<div id="stage-3" class="stage-container" style="display:none;">
+    <div class="level-header">STAGE 3/5</div>
+    <div class="chat-bubble her">Hindi nga babae dahilan bakit ako umiiyakkkk. Tulog namannnnn</div>
+    <div class="options-container">
+        <button onclick="wrongAnswer()">Matulog ka na rin kasi, gabi na.</button>
+        <button onclick="showProof('Tulog.png', 3)">At least wala me babae.</button>
+        <button onclick="wrongAnswer()">Sorry na, pagod lang sa acads.</button>
+    </div>
+</div>
+
+<div id="stage-4" class="stage-container" style="display:none;">
+    <div class="level-header">STAGE 4/5</div>
+    <div class="chat-bubble her">Sumusuko ka na agad?</div>
+    <div class="options-container">
+        <button onclick="wrongAnswer()">Bakit may torture pa? Ang unfair!</button>
+        <button onclick="showProof('STI 2.png', 4)">Mala Crystal Jane lang. Reklamo pero nahanapan na ng solution.</button>
+        <button onclick="wrongAnswer()">Sige na, panalo ka na.</button>
+    </div>
+</div>
+
+<div id="stage-5" class="stage-container" style="display:none;">
+    <div class="level-header">STAGE 5/5</div>
+    <div class="chat-bubble her">Sigurado ka? Hindi ka mapapagod kakahintay? 5 yrs?</div>
+    <div class="options-container">
+        <button onclick="showProof('Prof.png', 5)">Kapag okay ka na sa lahat, ako naman magbibigay sayo ng lahat.</button>
+        <button onclick="wrongAnswer()">Kakayanin ko para sa pangarap mo.</button>
+        <button onclick="wrongAnswer()">5 years is a long time, but I'll try.</button>
+    </div>
+</div>
+
+        <div id="proof-screen" style="display:none;">
+            <h3 style="color: var(--neon-green);">✅ CORRECT!</h3>
+            <p>This is exactly how your Husband handled you:</p>
+            <img id="proof-img" src="" alt="Proof of Win">
+            <button onclick="nextStage()">PROCEED TO NEXT STAGE</button>
+        </div>
+
+        <div id="congrats-screen" style="display:none;">
+            <h2>🎊 SIMULATION COMPLETE</h2>
+            <p>Identity Verified: You are really my Wifey hihi.</p>
+            <button onclick="openLetter()">OPEN THE SPECIAL LETTER</button>
+        </div>
+    </div>
+
+    <div id="letter-page" class="hidden">
+        <div class="letter-content">
+            <h2>To my Dearest Cera,</h2>
+            <p>Happy 2nd Monthsary, Baobeiii! We've officially survived for 61 days, 1,464 hours, 87,840 minutes, 5,270,400 seconds of this "expected the unexpected" journey of us. 
+                If our 1st month is all about the surprise of our relationship, 2nd Month has been about the joy of actually keeping you and learning new things about you and all the different version of yours.
+<p>
+Last month, tinatanong ko pa if may spot pa ba talaga ako sa buhay since you're a genius student, admin and owner in our gc, perfect daughter, and "mother of our babies". 
+But this month, tinigil ko na. Not because I'm assuming, but because you've made it so clear na hindi lang ako basta "singit" sa buhay mo, and na permanent na rin ako. 
+You've given me the "Wifey" access levels, and sa totoo lang? Isa 'yon sa mga access na gustong-gusto ko kahit kailang hshs.
+</p>
+<p>
+Remember na dati pa lang sa gc bet na kita inisin? Now, mas lalo ko pa siyang hinahanap-hanap. 
+Pati 'yung hindi sadya na screenshot sa repost ko kay 4x and 'yung "Gifted Dream" mo kay Ms.STI kuno na bigla na lang ako naging masama kahit hindi ko naman siya ginawa in real life HAHAHAHAHA, love itttttt!!! 
+Damay mo na rin 'yung mga unsuccessful mo na pang-aaway sa'kin na nagiging part na sa relationship natin. 
+Alam ko na one foot on death pa rin ako kapag inaasar kita and nira-ragebait kita pero ang cute mo kasi mainis sa vm, and 'yung mga gigil sa chat mo na win-win situation for me hehe.
+</p>
+<p>
+Although we didn't get to play much this month. I'm still thankful na nakakapag-spend pa rin tayo with our usual quality time which is gaming. 
+Nandoon pa rin 'yung mga dalaw mo na hindi naman ako dapat papalag pero dahil may "Attack" signal ka, go sa'kin 'yan HAHAHAHA. 
+I don't know din bakit gano'n but seeing you checking up on me in my lane every single time, it gives me this huge amount of "ego boost" na "potek, kahit 2v5 hindi kayo mananalo sa'min ng Asawa ko..." HAHAHAHAHAHAHA. 
+But beyond the game, I also realized na you still check me on my "lane" in real life rin pala. 
+When I'm stressed in random stuffs or when I'm just being a sleepyhead, nand'yan ka. You make me want to feel chill, relaxed, and enjoying the quality time we have not just in the Hero's Gorge, but in everything we do. 
+Let's hit that grind soon and mga scrim kapag okay na tayo sa lahat and may time na tayo. 
+Dati gusto lang kita maging handler eh, but now? I want you not just to be my teammate, but also as my Partner. 
+Babalagbagin natin silang lahat with our favourite heroes like Ata X Xiao Qiao, Biron/Bai Qi X Dr.Bian, and Chicha X Garuda.
+</p>
+<p>
+I still want to ask for sorry for the nights when sleep wins po. 
+I know na napag-usapan na natin and naiintindihan mo na, but the guilt is real because I missed many days where we can spend our time talking during peak hours, gaming, sending tiktoks/reels to each other, teasing until abutan na nang umaga. 
+But you know what? It makes me crave for the future pa lalo, the night where I don't have to say "goodnight" na thru the phone because I'll be right there in your side kissing you for a "proper goodnight" in person. 
+Five years from now? Yup, medyo matagal and malayo-layo pa. 
+But for someone like you? Kung loading screen man 'yan ng games? aantayin ko 'yan kahit gaano katagal and I won't even think for a millisecond to press the "cancel/exit" button. 
+Sabi ko nga sa'yo, I'm willing to wait. Not just because alam kong may mapapala ako sa'yo after kong maghintay, but also because I want to see you succeed in life and do your dreams to your parents, to your cousins, and to yourself. 
+Kahit gaano pa 'yan katagal basta para sa'yo, maghihintay ako.
+</p>
+<p>
+"Bolero" onti na lang eto na nickname ko sa'yo kakatawag mo sa'kin. 
+Minsan nga iniisip ko "bolero ba talaga ako?", pero sige sabihin natin na oo nga bolero ako, but only because you're so much amazing and too good. You are not the first good thing that happened to my life, yes. 
+But you are the best thing that happened to my "boring" life. I'm the type of person na bata pa lang alam na gusto niya, alam na gagawin niya sa buhay, alam na purpose niya, alam na kung anong direction niya sa hinaharap. 
+But all of it changed when I met you. Every single one of them now has changed because now I want it to be with you. 
+I don't want someone else to have a chance on you, that's why I'm going to do all things that I can do in this once in a lifetime opportunity na binigay mo sa'kin na maging part ng buhay mo.
+</p>
+<p>
+Thank you so much for another month, Baobeiii. Thank you so much for your "4x" and "Imy" tease and now with "Ms.STI" pa, also for your "unsuccessful" pang-aaway, and of course for being the perfect girlfriend kahit na minsan talagang todo topak mo. 
+So katulad last month, bibitinin ko muna ulit para sure na may part 3 hihi. 
+</p>
+<p>
+I love you so much, Crystal Jane. Always and forever, through every version of us, every topak of yours, and every win we have. I love you.
+</p>
+<p>
+- Your Hubby, Shion 🤍</p>
+        </div>
+    </div>
+
+<div id="tease-overlay" style="display: none;">
+    <div id="tease-content">
+        <div class="tease-emoji">🤔</div>
+        <p id="tease-text"></p>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
