@@ -275,3 +275,10 @@ button:active {
     font-weight: bold;
     margin: 0;
 }
+
+.gif-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0; 
+}
