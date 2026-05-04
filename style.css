@@ -277,8 +277,33 @@ button:active {
 }
 
 .gif-container {
-    width: 75%;
+    width: 90%;
     display: flex;
     justify-content: center;
     margin: 30px 0; 
+}
+
+@media screen and (max-width: 600px) {
+    #game-container, #letter-page {
+        width: 90% !important;
+        max-width: 90% !important;
+        padding: 20px !important;
+        margin: 10px auto !important;
+        box-sizing: border-box; 
+    }
+
+    .letter-content h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .letter-content p {
+        font-size: 0.95rem !important;
+        line-height: 1.6;
+    }
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
 }
