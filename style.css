@@ -276,16 +276,21 @@ button:active {
     margin: 0;
 }
 
-.gif-container img {
+.gif-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
 
-    width: 60%;
-    max-width: 250px;
-    min-width: 150px; 
-    
+.gif-container img {
+    width: 70%; 
+    max-width: 250px; 
     height: auto;
     display: block;
-    margin: 0 auto; 
-
+    
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px rgba(255, 143, 163, 0.3));
 }
 
 @media screen and (max-width: 600px) {
